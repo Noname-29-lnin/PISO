@@ -33,11 +33,18 @@ always_ff @(posedge i_clk or negedge i_rst_n) begin : proc_count
 end
 
 // Setup shift register
-logic [SIZE_DATA_IN-1:0] w_idata, w_idata_next; 
+logic [SIZE_DATA_IN-1:0] w_idata;
+logic [SIZE_DATA_IN-1:0] w_idata_next; 
 logic w_update_idata;
 assign w_update_idata = i_start & (~w_count_next);
 assign w_idata = w_update_idata ? i_data : w_idata_next;
-assign w_idata_next = w_idata;
+always_ff @( posedge i_clk or negedge i_rst_n ) begin : save_w_idata
+    if(~i_rst_n) begin
+        w_idata_next <= '0;
+    end else begin
+        w_idata_next <= w_idata;
+    end
+end
 always_comb begin : proc_shift_reg
     shift_reg[0] = w_idata[1:0];
     shift_reg[1] = w_idata[3:2];
