@@ -1,0 +1,46 @@
+========== Test Case 1: Reset and Start =========
+Time =                50000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =                70000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =                90000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               110000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               130000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               150000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               170000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               190000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               210000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               230000 	| i_start = 0 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+========== Test Case 2: Test Output After Reset =========
+Time =               390000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               410000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 1 	| o_done = 0
+Time =               430000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 01 	| o_valid = 1 	| o_done = 0
+Time =               450000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 11 	| o_valid = 1 	| o_done = 0
+Time =               470000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 1 	| o_done = 0
+Time =               490000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 10 	| o_valid = 1 	| o_done = 0
+Time =               510000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 1 	| o_done = 0
+Time =               530000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 01 	| o_valid = 1 	| o_done = 0
+Time =               550000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 1 	| o_done = 1
+Done processing data.
+========== Test Case 3: Change Data When Start is High - Data = 0x1234 =========
+Time =               730000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =               750000 	| i_start = 1 	| i_data = 0001001000110100 	| o_data = 00 	| o_valid = 1 	| o_done = 0
+========== Test Case 3: Change Data When Start is High - Data = 0x5678 =========
+Time =               790000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 11 	| o_valid = 1 	| o_done = 0
+Time =               810000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 1 	| o_done = 0
+Time =               830000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 10 	| o_valid = 1 	| o_done = 0
+Time =               850000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 1 	| o_done = 0
+Time =               870000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 01 	| o_valid = 1 	| o_done = 0
+Time =               890000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 1 	| o_done = 1
+Done processing data.
+========== Test Case 4: Change Start Signal While Data is Being Processed =========
+Time =              1050000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =              1070000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 1 	| o_done = 0
+Time =              1090000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 10 	| o_valid = 1 	| o_done = 0
+Time =              1110000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 11 	| o_valid = 1 	| o_done = 0
+Time =              1130000 	| i_start = 1 	| i_data = 0101011001111000 	| o_data = 01 	| o_valid = 1 	| o_done = 0
+Time =              1150000 	| i_start = 0 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =              1170000 	| i_start = 0 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =              1190000 	| i_start = 0 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =              1210000 	| i_start = 0 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Time =              1230000 	| i_start = 0 	| i_data = 0101011001111000 	| o_data = 00 	| o_valid = 0 	| o_done = 0
+Simulation completed.
+- tb_PISO.sv:117: Verilog $finish
